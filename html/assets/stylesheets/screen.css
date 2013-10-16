@@ -209,6 +209,7 @@ select {
 #main-nav {
   float: right;
   font-family: "CaviarDreams", Helvetica, Arial, sans-serif;
+  font-style: normal;
   ;
    }
   #main-nav ul{
@@ -228,15 +229,16 @@ select {
         background: #1f7e7f; }
 #nav-mobile
 {
-  display: none;
   background: url(nav.png) no-repeat center center;
-  float: right;
-  width: 15%;
-  height: 11%;
+  background-color: #04C7CE;
+  display: none;
+  float:right;
+  height: 76px;
   position: absolute;
   right: 0;
   top: 0;
-  opacity: .6;
+  width: 15%;
+  
 }
 #nav-mobile .nav-active
 {
@@ -245,7 +247,10 @@ select {
 
 @media only screen and (max-width: 768px){
   
-  #nav-mobile{ display: block; }
+  #nav-mobile{ 
+    
+    display: block; 
+  }
   #main-nav{
         width: 100%;
         float: none;
@@ -253,6 +258,7 @@ select {
     }
   #masthead{
     padding: 0;
+    width: 84.5%;
   }  
   #masthead #logo{
     float: none;
@@ -277,8 +283,9 @@ select {
   }
   #main-nav ul.open-menu{
     max-height: 400px;
-    width: 85%;
+    width: 100%;
     -webkit-transition: max-height .8s;
+    -moz-transition: max-height .8s;
   }
 
 
