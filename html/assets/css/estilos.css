@@ -229,7 +229,7 @@ select {
         background: #1f7e7f; }
 #nav-mobile
 {
-  background: url(nav.png) no-repeat center center;
+  background: url(../images/nav.png) no-repeat center center;
   background-color: #04C7CE;
   display: none;
   float:right;
