@@ -1,0 +1,9 @@
+/*
+    FONTS
+*/
+
+@include font-family('CaviarDreams', 'CaviarDreams-webfont', 'caviar_dreamsregular');
+@include font-family('CaviarDreamsBold', 'Caviar_Dreams_Bold-webfont', 'caviar_dreamsbold');
+
+$fontRegular: 'CaviarDreams', Helvetica, Arial, sans-serif;
+$fontBold: 'CaviarDreamsBold', Helvetica, Arial, sans-serif;

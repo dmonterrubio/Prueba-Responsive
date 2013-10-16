@@ -1,0 +1,36 @@
+/*
+    HEADER
+*/
+
+#masthead{
+	background: $primary;
+	color: #fff;
+	@include clearfix;
+	a{
+		color: #fff;
+	}
+	#logo{
+		display: block;
+		float: left;
+		@include fontSize(42);
+		padding:16px 0 18px;
+		line-height: 1; 
+	}
+}
+
+#main-nav{
+	float: right;
+	font-family: $fontBold;
+	@include fontSize(24);
+	text-transform: uppercase;
+	li{
+		display: inline-block;
+		a{
+			display: block;
+			padding: 26px 10px 18px;
+			&:hover{
+				background: $primaryDark;
+			}
+		}
+	}
+}

@@ -1,0 +1,78 @@
+/*
+    MIXINS
+*/
+
+@mixin clearfix{ 
+  &:after {
+    content: ".";    
+    display: block;    
+    height: 0;
+    overflow: hidden; 
+    clear: both;
+    zoom: 1;
+  }
+}
+
+@mixin font-family($font_name, $font_file, $mixin){
+  @font-face {
+    font-family: "#{$font_name}";
+    src: font_url("#{$font_file}.eot");
+    src: font_url("#{$font_file}.eot?#iefix") format("embedded-opentype"),
+         font_url("#{$font_file}.woff") format("woff"),
+         font_url("#{$font_file}.ttf") format("truetype"),
+         font_url("#{$font_file}.svg#{$mixin}") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  // El mixin crea automagicamente un placeholder 
+  // para extender segun el nombre que se haya pasado .
+  //   ej. @include font-family("KreonLight", "kreon-light-webfont", "kreon-light")
+  //       %font-kreon-light{
+  //          font-family: "#{$font_name}";
+  //          font-weight: normal!important;
+  //          font-style: normal!important;
+  //        }
+  %font-#{$mixin}{
+    font-family: "#{$font_name}";
+    font-weight: normal!important;
+    font-style: normal!important;
+  }
+}
+
+@mixin prefixer ($property, $value:null,
+                 $webkit: true,
+                    $moz: true,
+                     $ms: true,
+                      $o: true,
+                   $spec: true) {
+  @if $value{
+    @if $webkit { -webkit-#{$property}: $value; }
+    @if $moz    {    -moz-#{$property}: $value; }
+    @if $ms     {     -ms-#{$property}: $value; }
+    @if $o      {      -o-#{$property}: $value; }
+    @if $spec   {         #{$property}: $value; }
+  }
+}
+
+@mixin input-placeholder($style, $color) {
+  &.placeholder {
+    font-style: $style; 
+    color: $color; 
+  }
+  &:-moz-placeholder {
+    font-style: $style; 
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    font-style: $style; 
+    color: $color; 
+  } 
+}
+
+@mixin fontSize($size){
+  font-size: ($size) + px;
+  font-size: ($size/10) + rem;
+}
+
+

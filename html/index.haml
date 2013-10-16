@@ -1,0 +1,32 @@
+!!! 5
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    
+    %meta{:content => "width=device-width", :name => "viewport"}
+
+    %title Redradix
+
+    /[if lt IE 9] 
+      %script{:src=>"assets/javascripts/html5shiv.js"}
+    
+    %link{:href=> 'assets/stylesheets/screen.css', :rel=> 'stylesheet'}/
+  
+  %body
+    .page         
+      %header#masthead
+        .wrapper
+          %nav#main-nav
+            %ul
+              %li 
+                %a{:href =>'#'} Ítem 1
+              %li 
+                %a{:href =>'#'} Ítem 2
+              %li 
+                %a{:href =>'#'} Ítem 3
+              %li 
+                %a{:href =>'#'} Ítem 4
+
+          %a#logo{:href =>'/'} Logotipo
+
+      

@@ -1,0 +1,13 @@
+/*
+    BUTTONS
+*/
+
+.button{
+	display: inline-block;
+	
+	&:hover{
+		background: $primaryDark;
+		color: #fff;
+	}
+	
+}

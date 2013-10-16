@@ -1,0 +1,62 @@
+/*
+    FORMS
+*/
+
+form {
+  margin: 0;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input{
+  -webkit-appearance: none;
+  @include border-radius(0);  
+}
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+textarea {
+    overflow: auto; 
+    vertical-align: top;
+}
+
+
+
+input,
+textarea {
+  //background: #f8f8f8;
+  background: #fafafa;
+  border: none;
+  border-bottom: 3px solid #dcdcdc;
+  font-family: $fontRegular;
+  @include fontSize(18);
+  padding: 10px 12px;
+  color: $text;
+  width: 100%;
+  &:focus{
+    border-color: $primary;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+  width: auto;
+}
+
+select{
+  background: #fafafa;
+  border: none;
+  padding: 10px 12px;
+  color: $text;
+  width: 100%;
+}
+
+
